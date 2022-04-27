@@ -1,0 +1,278 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-radial: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+
+    --scissors: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+    --paper: linear-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
+    --rock: linear-gradient(hsl(349, 71%, 52%),hsl(349, 70%, 56%));
+    --lizard: linear-gradient(hsl(261, 73%, 60%),hsl(261, 72%, 63%));
+    --cyan: linear-gradient(hsl(189, 59%, 53%),hsl(189, 58%, 57%));
+
+    --fc-dark: hsl(229, 25%, 31%);
+    --fc-score: hsl(229, 64%, 46%);
+    --header: hsl(217, 16%, 45%);
+
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(46, 46, 85);
+    background: var(--bg-radial);
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-weight: var(--fw-600);
+
+}
+
+.container-game {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/*---Hero--*/
+.score-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    border: 5px solid var(--header);
+    border-radius: 10px;
+    
+    margin-top: 2rem;
+}
+
+.score-flex {
+    text-align: center;
+    background-color: #fff;
+
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.score-flex p:nth-of-type(1) {
+    color: var(--fc-score);
+    font-size: .8rem;
+    margin:0;
+}
+
+.score-flex p:nth-of-type(2) {
+    color: var(--fc-dark);
+    font-size: 3rem;
+    margin:0;
+}
+
+/*---Card---*/
+.start-game {
+    background-image: url('../images/paper-scissors-rock/bg-pentagon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    height: 60vh;
+
+    position: relative;
+}
+
+
+
+.card{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-content{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bc-paper{
+    background: var(--paper);
+}
+
+.bc-paper-pos{
+    position: absolute;
+    
+    top: 170px;
+    right: 80px;
+}
+
+
+
+.bc-scissors{
+    background: var(--scissors);
+    
+}
+
+.bc-scissors-pos{
+    position: absolute;
+    top: 70px;
+    left: 220px;
+
+}
+
+.bc-rock{
+    background: var(--rock);
+    
+}
+
+.bc-rock-pos {
+    position: absolute;
+    top: 350px;
+    right: 120px;
+    
+}
+
+.bc-spock{
+    background: var(--cyan);
+}
+
+.bc-spock-pos{
+    position: absolute;
+    top: 170px;
+    left: 80px;
+
+}
+
+.bc-lizard{
+    background: var(--lizard);
+    
+}
+
+.bc-lizard-pos{
+    position: absolute;
+    top: 350px;
+    left: 120px;
+
+}
+
+.rules {
+    width: fit-content;
+    border: 5px solid var(--header);
+    border-radius: 10px; 
+    color: var(--header);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    padding: 0 2.5rem;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.rules:hover{
+    cursor: pointer;
+    background-color: var(--header);
+    color: var(--bg-radial)
+}
+
+
+/*---Dialog---*/
+#rulesDialogClose:hover{
+    cursor: pointer;
+}
+
+/*---Screen 2---*/
+.screen2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 4rem;
+}
+
+.screen2 h2 {
+    text-transform: uppercase;
+    color: #fff;
+
+    margin-bottom: 2rem;
+}
+
+.screen2-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen2 h2 {
+    font-size: 1.2rem;
+}
+
+.default-card {
+    background-color: hsl(237, 49%, 15%);
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.result .btn{
+    border: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: hsl(237, 49%, 15%);
+
+    padding: .75rem 1rem;
+    border-radius: 10px;
+}
+
+.winner-shadow{
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 25px rgba(255, 255, 255, 0.1),
+        0 0 0 50px rgba(255, 255, 255, 0.07),
+        0 0 0 75px rgba(255, 255, 255, 0.05);
+}
+
+.card-size {
+    width: 200px;
+    height: 200px;
+}
+
+.card-content-size {
+    width: 170px;
+    height: 170px;
+}
+
+
+/*-----------*/
+.hidden{
+    display: none;
+}
+

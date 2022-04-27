@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rock, Paper, Scissors</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/paper-scissors-rock.css" />
+
+    <script src="js/paper-scissors-rock.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <div class="container flex">
+            <h1>JS Games</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Handy weitwurf</a></li>
+                    <li><a href="#">Scher, stein, papier</a></li>
+                    <li><a href="#">Game 3</a></li>
+                    <li><a href="#">Game 4</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-game">
+      <div class="score-card">
+        <img src="images/paper-scissors-rock/logo-bonus.svg" alt="Logo" />
+        <div class="score-flex">
+          <p>score</p>
+          <p id="score">0</p>
+        </div>
+      </div>
+      
+      <div id="screen1" class="start-game">
+
+        <div id="scissors" class="card bc-scissors bc-scissors-pos" onclick="choice(1)">
+          <div class="card-content">
+            <img src="images/paper-scissors-rock/icon-scissors.svg" alt="">
+          </div>
+        </div>
+
+        <div id="paper" class="card bc-paper bc-paper-pos" onclick="choice(2)">
+          <div class="card-content">
+            <img src="images/paper-scissors-rock/icon-paper.svg" alt="">
+          </div>
+        </div>
+        <div id="rock" class="card bc-rock bc-rock-pos" onclick="choice(3)">
+          <div class="card-content">
+            <img src="images/paper-scissors-rock/icon-rock.svg" alt="">
+          </div>
+        </div>
+        <div id="spock" class="card bc-spock bc-spock-pos" onclick="choice(5)">
+          <div class="card-content">
+            <img src="images/paper-scissors-rock/icon-spock.svg" alt="">
+          </div>
+        </div>
+        <div id="lizard" class="card bc-lizard bc-lizard-pos" onclick="choice(4)">
+          <div class="card-content">
+            <img src="images/paper-scissors-rock/icon-lizard.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div id="screen2" class="screen2 hidden">
+        <div class="screen2-div">
+          <h2>You picked</h2>
+          <div id="myChoice">
+          </div>
+        </div>
+
+        <div id="result" class="result hidden">
+          <h2 id="result-h2">You lose</h2>
+          <button class="btn" onclick="startGame()">play again</button>
+        </div>
+
+        <div>
+          <h2>The house picked</h2>
+          <div id ="comChoice">
+          </div>
+        </div>
+      </div>
+
+      <div id="rules" class="rules">
+        <p>rules</p>
+      </div>
+      <dialog id="rulesDialog">
+        <div id="rulesDialogClose">
+          <img src="images/paper-scissors-rock/icon-close.svg" alt="">
+        </div>
+
+        <div>
+          <img src="images/paper-scissors-rock/image-rules-bonus.svg" alt="">
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>

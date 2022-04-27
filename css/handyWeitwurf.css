@@ -1,0 +1,54 @@
+main {
+    text-align: center;
+}
+
+#gameOption {
+    display: none;
+}
+
+#choose > div,
+#gameOption > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1rem 0;
+}
+
+
+
+.errorInput::placeholder {
+    color: red;
+}
+
+.errorInput{
+    border: 3px solid red;
+}
+
+.error {
+    color: red;
+}
+
+.button {
+    background-color: var(--primary);
+    width: fit-content;
+    margin-inline: auto;
+    padding: .5rem 1.5rem;
+    border: none;
+}
+
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    color: white;
+}
+
+#game-screen {
+    background-color: green;
+    height: 50vh;
+    margin-top: 1rem
+}
+
+img {
+    width: 100px;
+}

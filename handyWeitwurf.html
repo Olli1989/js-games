@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handy Weitwurf</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/handyWeitwurf.css" />
+    <script src="js/index.js" defer></script>
+    <script src="js/handyWeitwurf.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <h1>JS Games</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Handy weitwurf</a></li>
+            <li><a href="#">Scher, stein, papier</a></li>
+            <li><a href="#">Game 3</a></li>
+            <li><a href="#">Game 4</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Handy Weitwurf</h1>
+        <div id="choose" class="box">
+            <div>
+                <label for="planet">Wählen Sie den Planet aus</label>
+                <select name="planet" id="planet" onchange="changeUrl()">
+                  <option value="9.81" selected>Erde</option>
+                  <option value="1.62">Mond</option>
+                  <option value="3.69">Mars</option>
+                  <option value="24.79">Jupiter</option>
+                </select>
+            </div>
+            <div>
+                <label for="try"
+                  >Bitte geben Sie die maximale Anzahl an Versuchen an</label
+                >
+                <input type="text" name="try" id="try" />
+            </div>
+            <button class="button" id="start">Start game</button>
+        </div>
+
+        <div id="gameOption" class="box">
+            <div>
+                <label for="angel"
+                >Bitte geben Sie den Winkel zwischen 0 und 90 Grad ein:</label
+                >
+                <input type="text" name="angel" id="angel" />
+            </div>
+            <div>
+                <label for="force"
+                >Bitte geben Sie die Geschwindigkeit in m/s an</label
+                >
+                <input type="text" name="force" id="force" />
+            </div>
+            <p>Das Monster steht <span id="distanceMonster"></span>m entfernt von dir</p>
+            <button class="button" id="btn-try">Versuch</button>
+        </div>
+
+        <img src="images/handy.jpg" alt="">
+        <img src="images/alien.webp" alt="">
+        
+
+      </div>
+    </main>
+  </body>
+</html>

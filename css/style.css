@@ -1,0 +1,51 @@
+:root {
+    --primary: green;
+    font-size: .9rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+header {
+    height: 75px;
+    background-color: var(--primary);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul{
+    display: flex;
+    margin: 0;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+nav ul li:last-of-type a{
+    margin-right: 0;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: underline;
+}
