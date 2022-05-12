@@ -1,0 +1,70 @@
+:root {
+    --red: red;
+    --green: green;
+    --yellow: yellow;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container-guess-number {
+    text-align: center;
+}
+
+.container-guess-number input {
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.wrong {
+    background-color: var(--red);
+}
+
+.right {
+    background-color: var(--green);
+}
+
+.wrong-position{
+    background-color: var(--yellow);
+}
+
+.button {
+    width: fit-content;
+    margin: 1rem auto 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: var(--header-border);
+    border-radius: 10px;
+    padding: .5rem;
+    cursor: pointer;
+}
+  
+.button:focus,
+.button:hover{
+background-color: #fff;
+color: var(--header-border);
+}
+
+#wonDialog .button {
+    border-color: #000;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    display: none;
+}
+

@@ -1,3 +1,7 @@
+body {
+    color: #000;
+}
+
 main {
     text-align: center;
 }
@@ -6,33 +10,31 @@ main {
     display: none;
 }
 
-#choose > div,
+#gameOption p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 #gameOption > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-    margin: 1rem 0;
+#choose > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 
-.errorInput::placeholder {
-    color: red;
-}
 
-.errorInput{
-    border: 3px solid red;
-}
-
-.error {
-    color: red;
-}
 
 .button {
     background-color: var(--primary);
     width: fit-content;
-    margin-inline: auto;
+    margin: 1rem auto 0;
     padding: .5rem 1.5rem;
     border: none;
 }
@@ -52,3 +54,55 @@ main {
 img {
     width: 100px;
 }
+
+.box {
+    background-color: aliceblue;
+    max-width: 600px;
+    margin-inline: auto;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.button:focus,
+.button:hover{
+    background-color: #000;
+    color: aliceblue;
+}
+
+#planet{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:.5rem;
+    background-color: aliceblue;
+    margin: 1rem 0;
+}
+
+.card-container{
+    display: flex;
+    
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 1rem;
+
+    overflow-x: auto;
+    scroll-snap-align: end;
+}
+
+.card {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: .5rem;
+    margin: .25rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+

@@ -3,7 +3,7 @@
 }
 
 :root {
-    --bg-radial: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+
 
     --scissors: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
     --paper: linear-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
@@ -13,7 +13,7 @@
 
     --fc-dark: hsl(229, 25%, 31%);
     --fc-score: hsl(229, 64%, 46%);
-    --header: hsl(217, 16%, 45%);
+   
 
     --fw-600: 600;
     --fw-700: 700;
@@ -26,12 +26,7 @@ html {
 }
 
 body {
-    background: rgb(46, 46, 85);
-    background: var(--bg-radial);
     min-height: 100vh;
-    font-family: sans-serif;
-    font-weight: var(--fw-600);
-
 }
 
 .container-game {
@@ -50,7 +45,6 @@ body {
     border: 5px solid var(--header);
     border-radius: 10px;
     
-    margin-top: 2rem;
 }
 
 .score-flex {
@@ -75,11 +69,6 @@ body {
 
 /*---Card---*/
 .start-game {
-    background-image: url('../images/paper-scissors-rock/bg-pentagon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    height: 60vh;
 
     position: relative;
 }
@@ -119,7 +108,7 @@ body {
 .bc-paper-pos{
     position: absolute;
     
-    top: 170px;
+    top: 110px;
     right: 80px;
 }
 
@@ -132,7 +121,7 @@ body {
 
 .bc-scissors-pos{
     position: absolute;
-    top: 70px;
+    top: 10px;
     left: 220px;
 
 }
@@ -144,7 +133,7 @@ body {
 
 .bc-rock-pos {
     position: absolute;
-    top: 350px;
+    top: 270px;
     right: 120px;
     
 }
@@ -155,7 +144,7 @@ body {
 
 .bc-spock-pos{
     position: absolute;
-    top: 170px;
+    top: 110px;
     left: 80px;
 
 }
@@ -167,16 +156,16 @@ body {
 
 .bc-lizard-pos{
     position: absolute;
-    top: 350px;
+    top: 270px;
     left: 120px;
 
 }
 
 .rules {
     width: fit-content;
-    border: 5px solid var(--header);
+    border: 5px solid #fff;
     border-radius: 10px; 
-    color: var(--header);
+    color: #fff;
     font-weight: var(--fw-700);
     text-transform: uppercase;
     padding: 0 2.5rem;
@@ -188,8 +177,8 @@ body {
 
 .rules:hover{
     cursor: pointer;
-    background-color: var(--header);
-    color: var(--bg-radial)
+    background-color: #fff;
+    color: var(--header)
 }
 
 
@@ -246,10 +235,19 @@ body {
     font-family: inherit;
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: hsl(237, 49%, 15%);
+    cursor: pointer;
 
     padding: .75rem 1rem;
     border-radius: 10px;
+
+    border: 2px solid #fff;
+    background-color: var(--header);
+    color: #fff;
+}
+
+.result .btn:hover{
+    color: var(--header);
+    background-color: #fff;
 }
 
 .winner-shadow{
@@ -271,8 +269,11 @@ body {
 }
 
 
+
+
 /*-----------*/
 .hidden{
     display: none;
 }
+
 

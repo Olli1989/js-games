@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zahlen Raten!</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/guess-number.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <script src="js/index.js" defer></script>
+    <script src="js/guess-number.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <p><a href="index.html">JavaScript Games</a></p>
+        <nav>
+          <ul>
+            <li><a href="handyWeitwurf.html">Handy weitwurf</a></li>
+            <li><a href="paper-scissors-rock.html">Scher, stein, papier</a></li>
+            <li><a href="guessNumber.html">Zahlen raten</a></li>
+            <li><a href="codeBreaker.html">Code Breaker</a></li>
+            <li><a href="snake.html">Snake</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-guess-number flex-center">
+        <div id="screen1" class="screen">
+          <h1>Erraten Sie eine Zufällige Zahl!</h1>
+          <p>Legen Sie eine Obergrenze der zu erratene Zahl fest</p>
+          <input type="number" id="upperLimit" />
+          <p>Legen Sie die Anzahl der Versuche fest</p>
+          <input type="number" id="counter" />
+          <div class="button start">Start Game</div>
+        </div>
+        <div id="screen2" class="screen hidden">
+          <p>Geben Sie eine Zahl ein</p>
+          <input type="number" id="guessNumber" />
+          <div class="button" id="tryButton">Try this Number!</div>
+    
+          <p class="margin-tb">Die zu erratene Zahl liegt zwischen <span id="rangeNumber"></span></p>
+    
+          <div id="slider-range"></div>
+        </div>
+    
+        <dialog class="modal" id="modal">
+          <div class="button close-button">Restart the Game!</div>
+        </dialog>
+      </div>
+    </main>
+  </body>
+</html>

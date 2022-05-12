@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Snake</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/snake.css" />
+
+    <script src="js/snake.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <p><a href="index.html">JavaScript Games</a></p>
+        <nav>
+          <ul>
+            <li><a href="handyWeitwurf.html">Handy weitwurf</a></li>
+            <li><a href="paper-scissors-rock.html">Scher, stein, papier</a></li>
+            <li><a href="guessNumber.html">Zahlen raten</a></li>
+            <li><a href="codeBreaker.html">Code Breaker</a></li>
+            <li><a href="snake.html">Snake</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-snake">
+        <div>
+          <h1>Snake Game!</h1>
+          <div class="flex mx-bottom">
+            <h2>Score <span id="score">0</span></h2>
+            <button id="start-reset-btn" class="btn">Start</button>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="grid">
+            <div class="board"></div>
+            <h2 id="countdown"></h2>
+          </div>
+
+          <div id="leaderboard"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

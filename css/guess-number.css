@@ -1,0 +1,56 @@
+.container-guess-number { 
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: fit-content;
+  margin: 1rem auto 0;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover{
+  background-color: #fff;
+  color: var(--header-border);
+}
+
+.margin-tb {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ui-widget{
+  background-color: red;
+}
+
+.ui-widget-header{ 
+  background-color: green;
+}
+
+.close-button{
+  border: 2px solid black;
+  color: black;
+}
+
+.close-button:focus,
+.close-button:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+
+.hidden{
+  display: none;
+}
+
+

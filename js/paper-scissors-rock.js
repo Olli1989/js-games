@@ -69,7 +69,7 @@ const choice = (choiceNumber) => {
 }
 
 const checkWinner = (choiceNumber, comChoiceRandomNumber) => {
-    console.log(choiceNumber + " " + comChoiceRandomNumber)
+
     if((choiceNumber==5 && comChoiceRandomNumber == 1)||(choiceNumber+1 == comChoiceRandomNumber)){
         return 1
     } else if((comChoiceRandomNumber==5 && choiceNumber == 1)||(comChoiceRandomNumber+1 == choiceNumber)){

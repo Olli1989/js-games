@@ -14,21 +14,22 @@
   <body>
     <header>
       <div class="container flex">
-        <h1>JS Games</h1>
+        <p><a href="index.html">JavaScript Games</a></p>
         <nav>
           <ul>
-            <li><a href="#">Handy weitwurf</a></li>
-            <li><a href="#">Scher, stein, papier</a></li>
-            <li><a href="#">Game 3</a></li>
-            <li><a href="#">Game 4</a></li>
+            <li><a href="handyWeitwurf.html">Handy weitwurf</a></li>
+            <li><a href="paper-scissors-rock.html">Scher, stein, papier</a></li>
+            <li><a href="guessNumber.html">Zahlen raten</a></li>
+            <li><a href="codeBreaker.html">Code Breaker</a></li>
+            <li><a href="snake.html">Snake</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
       <div class="container">
-        <h1>Handy Weitwurf</h1>
         <div id="choose" class="box">
+          <h1>Handy Weitwurf</h1>
             <div>
                 <label for="planet">Wählen Sie den Planet aus</label>
                 <select name="planet" id="planet" onchange="changeUrl()">
@@ -40,7 +41,7 @@
             </div>
             <div>
                 <label for="try"
-                  >Bitte geben Sie die maximale Anzahl an Versuchen an</label
+                  >Bitte geben Sie die maximale Anzahl an Versuchen an (max. 50)</label
                 >
                 <input type="text" name="try" id="try" />
             </div>
@@ -48,9 +49,10 @@
         </div>
 
         <div id="gameOption" class="box">
+          <h1>Handy Weitwurf</h1>
             <div>
                 <label for="angel"
-                >Bitte geben Sie den Winkel zwischen 0 und 90 Grad ein:</label
+                >Bitte geben Sie einen Winkel zwischen 0 und 90 Grad ein</label
                 >
                 <input type="text" name="angel" id="angel" />
             </div>
@@ -64,8 +66,17 @@
             <button class="button" id="btn-try">Versuch</button>
         </div>
 
-        <img src="images/handy.jpg" alt="">
-        <img src="images/alien.webp" alt="">
+        <div id="result"></div>
+
+        <dialog id="wonDialog">
+          <p>You got me!!!</p>
+          <button id="restartWon" class="button restart">Restart</button>
+        </dialog>
+
+        <dialog id="lostDialog">
+          <p>You have lost!!!</p>
+          <button id="restartLost" class="button restart">Restart</button>
+        </dialog>   
         
 
       </div>

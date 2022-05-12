@@ -2,101 +2,100 @@ let startGame = document.getElementById('start')
 let buttonTry = document.getElementById('btn-try')
 let gameUrl = document.getElementById('game-screen')
 
-let inputTry = document.getElementById('try').value
+let restart = document.getElementsByClassName('restart')
+
+let inputTry = document.getElementById('try')
 let fallingSpeed = document.getElementById('planet').value
-let inputforce = document.getElementById('force').value
-let inputangel = document.getElementById('angel').value
+let inputForce = document.getElementById('force')
+let inputAngle = document.getElementById('angel')
+
 let throwingDistance
 let distanceToMonster = Math.round(Math.random() * 90 + 10)
+let inputforceCalc
+let inputangleCalc
+let inputTryValue
 
-console.log(gameUrl)
+let resultArr=[]
 
 document.body.style.backgroundImage="url(images/earth.jpg)"
+document.body.style.backgroundRepeat="no-repeat"
+document.body.style.backgroundSize="cover"
 
 startGame.addEventListener('click', ()=> {
-    inputTry = document.getElementById('try').value
-    console.log(inputTry)
-    if(inputTry.value == ""){
-        inputTry.className="errorInput"
-        inputTry.placeholder="Enter your tries"
-    } else {
+    let inputTryVal = document.getElementById('try').value
+
+    if(inputTryVal > 0 || inputTry<=50){
         isGameStarted= true
         document.getElementById('choose').style.display="none"
         document.getElementById('gameOption').style.display="block"
         distanceMonster.innerText = distanceToMonster
+        inputTryValue = inputTry.value
         buttonTry.innerText = "Versuch"
+    } else {
+        inputTry.value=""
+        inputTry.className="errorInput"
+        inputTry.placeholder="Enter your tries"
     }
+
 })
 
 
 buttonTry.addEventListener('click', ()=> {
-    /*let errorAngel = getErrorMessage(inputAngle,0,90)
-    let errorForce = getErrorMessage(inputForce,0,90)
+
+
+    let errorAngel = getErrorMessage(inputAngle,0,90)
+    let errorForce = getErrorMessage(inputForce,0,1000)
     if(errorAngel != ""){
-        console.log("check")
-        span = document.createElement('span')
-        console.log(span)
-        span.innerHTML=""
-        span.classList.add('error')
-        span.append(errorAngel)
-        inputAngle.after(span)
+        inputAngle.value=""
+        inputAngle.placeholder = errorAngel
+        inputAngle.className="errorInput"
     }
 
     if(errorForce != ""){
-        span = document.createElement('span')
-        span.classList.add('error')
-        span.append(errorForce)
-        inputForce.after(span)
-    }*/
+        inputForce.value=""
+        inputForce.placeholder=errorForce
+        inputForce.className="errorInput"
+    }
+   
 
+    if(errorAngel == "" && errorForce == "") {
+        inputforceCalc = document.getElementById('force').value
+        inputangleCalc = document.getElementById('angel').value * ( Math.PI / 180 )
 
-    inputforce = document.getElementById('force').value
-    inputangel = document.getElementById('angel').value * ( Math.PI / 180 )
-
-    
-    if(buttonTry.innerHTML == "Versuch") {
+        inputTryValue--
         
+        throwingDistance =  ((inputforceCalc * inputforceCalc) * Math.sin(2 * inputangleCalc)) / fallingSpeed
         
-        throwingDistance =  ((inputforce * inputforce) * Math.sin(2 * inputangel)) / fallingSpeed
-        console.log(throwingDistance)
-        if(throwingDistance<distanceToMonster){
-            console.log("almost <")
-        } else if(throwingDistance>distanceToMonster){
-            console.log("almost >")
+        if(throwingDistance<distanceToMonster || throwingDistance>distanceToMonster){
+            resultArr.push(Math.abs(distanceToMonster-throwingDistance))
+            printResult()
         } else {
-            console.log("congratulation")
+            wonDialog.showModal();
+        }
+
+        if(inputTryValue == 0){
+
+            lostDialog.showModal()
         }
         
-        inputTry--
-
-    } else if (buttonTry.innerHTML == "New Game") {
-        document.getElementById('gameOption').style.display="none"
-        document.getElementById('choose').style.display="block"
-
-    }
+    } 
     
-    console.log(inputTry)
-    buttonTry.innerHTML = inputTry>0 ? "Versuch" : "New Game"
-
-            
-        
-
-    
-
 })
 
+const printResult = () => {
+    let resultDiv = document.getElementById('result')
+    let html =""
+    html += '<div class="card-container">'
+    resultArr.forEach((ele,i)=> {
+        html+=`<div class="card"><p>Versuchnr. ${i+1}</p><p>Entfernung ${ele.toFixed(2)}m</p></div>`
+    })
+    html+= '</div>'
 
-
-const getErrorMessage = (input ,min=0, max=100) => {
-    if(input.value == ""){
-        return "Enter a value"
-    } else if(!parseFloat(inputAngle.value)){
-        return "Enter a number"
-    } else if(input.value <= min || input.value >= max){
-        return `Enter a number between ${min} and ${max}`
-    }
-    return ""
+    resultDiv.innerHTML = html
 }
+
+
+
 
 const gameScreen = document.getElementById('game-screen')
 

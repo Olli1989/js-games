@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Code Breaker</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/code-breaker.css" />
+
+    <script src="js/index.js" defer></script>
+    <script src="js/code-breaker.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <p><a href="index.html">JavaScript Games</a></p>
+        <nav>
+          <ul>
+            <li><a href="handyWeitwurf.html">Handy weitwurf</a></li>
+            <li><a href="paper-scissors-rock.html">Scher, stein, papier</a></li>
+            <li><a href="guessNumber.html">Zahlen raten</a></li>
+            <li><a href="codeBreaker.html">Code Breaker</a></li>
+            <li><a href="snake.html">Snake</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-guess-number">
+          <h1>Code Breaker!</h1>
+          <p>Errate die Zahlenkombination (1-9)</p>
+          <div class="code-container">
+            <div id="row1" class="row">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row2" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row3" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row4" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row5" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row6" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+            <div id="row7" class="row hidden">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+              <input type="text" name="codeInput">
+            </div>
+
+          </div>
+          <div class="button" id="checkButton">Check Code</div>
+      </div>
+
+      <dialog id="wonDialog">
+        <p>You have won!!!</p>
+        <button id="restartWon" class="button">Restart</button>
+      </dialog>
+
+      <dialog id="lostDialog">
+        <p>You have lost!!!</p>
+        <button id="restartLost" class="button">Restart</button>
+      </dialog> 
+    </main>
+  </body>
+</html>
